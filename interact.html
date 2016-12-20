@@ -1,0 +1,18 @@
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.js"
+			  integrity="sha256-n8wkEJNAWUaIUDnfQoz6fwBRofK9vMWjE6F3qeNfiAY="
+			  crossorigin="anonymous" ></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web-socket-js/1.0.0/web_socket.js" ></script>
+
+<body>
+	<h2>Interaction</h2>
+	<div id="scroll"></div>
+	<br>
+	<input id="input" class="live_input">
+</body>
+
+<script>
+	$(document).ready(function(){
+		connect("localhost", 2233, "interact");
+	});
+</script>

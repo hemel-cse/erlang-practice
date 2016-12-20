@@ -27,7 +27,7 @@ fac(N) -> N* fac(N-1).
 client(N) ->
 	{ok, Socket} = gen_udp:open(0, [binary]),
 	io:format("client opened socket=~p~n",[Socket]),
-	ok = gen_udp:send(Socket, "localhost", 4000,
+	ok = gen_udp:send(Socket, "192.168.1.96", 4000,
 		term_to_binary(N)),
 	Value = receive
 				{udp, Socket, _,_, Bin} = Msg ->
