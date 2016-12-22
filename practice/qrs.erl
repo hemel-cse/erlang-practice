@@ -3,9 +3,9 @@
 
 
 to_q(L,DB) ->
-	io:format("#~p",[DB]),
-	tail_len(L).
-
+    result = "#" ++ atom_to_list(DB) ++ 
+    		tail_len(L),
+    			result.
 
 tail_len(L) -> 
 	io:format("{"),
